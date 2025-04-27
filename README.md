@@ -219,7 +219,7 @@ Open with `Audacity` and use mode `Spectrogram`
 
 ![Screenshot 2025-04-26 175141](https://hackmd.io/_uploads/Hkg-_7okle.jpg)
 
-Get a image about command. Run this command and get the flag
+Get an image about command. Run this command and get the flag
 
 ![Screenshot 2025-04-26 175710](https://hackmd.io/_uploads/ByuX_msJex.png)
 
