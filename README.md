@@ -4,25 +4,36 @@
 # Crypto
 ## Rotten
 ![image](https://hackmd.io/_uploads/ryteeGoJgl.png)
+
 Using ROT13 cipher to decode this: `PVG{LxxdJwAXJGcsDoncKfRctddA}`
+
 ![image](https://hackmd.io/_uploads/HJkdlMokxx.png)
+
 **FLAG: CIT{YkkqWjNKWTpfQbapXsEpgqqN}**
 
 # Forensics
 ![image](https://hackmd.io/_uploads/rk84gQsylg.png)
 ## Brainrot Quiz!
 ![Screenshot 2025-04-26 222832](https://hackmd.io/_uploads/ryt6gfsyll.png)
-Resource: brainrot.pcap
+
+Resource: [brainrot.pcap](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Forensics/brainrot.pcap)
+
 ![image](https://hackmd.io/_uploads/ryZmbzokxe.png)
+
 Use Wireshark, it has some ICMP packet. Tracing it and catching the packet No.11 that has the base64 message in Data
+
 ![image](https://hackmd.io/_uploads/B1DFZMskgl.png)
+
 Decode base64 and get the flag
+
 ![image](https://hackmd.io/_uploads/HyFRZfjyxg.png)
+
 **FLAG: CIT{tr4l4l3r0_tr4l4l4}**
 
 ## True CTF Love
 ![Screenshot 2025-04-26 222838](https://hackmd.io/_uploads/ryx-MGiJeg.png)
-Resource: The_Flag_Well_Capture_Together.eml
+
+Resource: [The_Flag_Well_Capture_Together.eml](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Forensics/The_Flag_Well_Capture_Together.eml)
 
 This is an email forensics, to open .eml file, I using this web [EML Analyzer](https://analyzer.sublime.security/)
 ![Screenshot 2025-04-26 163943](https://hackmd.io/_uploads/rJgKMfoJxe.png)
@@ -32,12 +43,15 @@ Flag is hidden in `DKIM-signature`. This has 2 field `b=` - First is encrypt sig
 
 ## We lost the flag
 ![image](https://hackmd.io/_uploads/Syws7GoJgg.png)
-Resource: lost.png
+
+Resource: [lost.png](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Forensics/lost.png)
 
 This file is corrupted when opened
+
 ![image](https://hackmd.io/_uploads/rynr4fiyle.png)
 
 Check with HxD, I see that has some hex `JFIF` - this byte is only appearing in JPEG file, and the file signature is corrupted. So my idea is changing the file signature to `JPEG`
+
 ![image](https://hackmd.io/_uploads/SJxiGHfjyex.png)
 
 Check JPEG file signature with this [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures), fixing it, changing file type to .jpeg, opening it and getting the flag
@@ -49,9 +63,11 @@ Check JPEG file signature with this [List of file signatures](https://en.wikiped
 
 ## Bits 'n Pieces
 ![image](https://hackmd.io/_uploads/H1i0Fzjkeg.png)
-Resource: Cache0000.bin
+
+Resource: [Cache0000.bin](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Forensics/Cache0000.zip)
 
 It's a .bin, so first I use HxD to check some bit in header
+
 ![Screenshot 2025-04-26 165909](https://hackmd.io/_uploads/Byk7czj1gg.png)
 
 `RDP8bmp` is RDP bitmap cache. Use [mbc-tools](https://github.com/ANSSI-FR/bmc-tools) to extract bmp file, using option -b to combine all bmp file
@@ -60,14 +76,17 @@ It's a .bin, so first I use HxD to check some bit in header
 python3 bmc-tools.py -s Cache0000.bin -d . -b
 ```
 Open the `Cache0000.bin_collage.bmp`
+
 ![Screenshot 2025-04-26 170951](https://hackmd.io/_uploads/B1AKcfsygl.png)
+
 Flag is in the pic.
 
 **FLAG: CIT{c4ch3_m3_if_y0u_c4n}**
 
 ## Baller
 ![image](https://hackmd.io/_uploads/HJy5jzi1gl.png)
-Resource: baller.zip
+
+Resource: [baller.zip](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Forensics/baller.zip)
 
 When I tried to unzip it, I got this Warning. I thought wrong file extension/wrong bit or mistake structure causes this problem.
 ![image](https://hackmd.io/_uploads/HkaghMjkel.png)
@@ -98,7 +117,8 @@ The flag is in the lower right corner
 ![image](https://hackmd.io/_uploads/B14XlXjylg.png)
 ## Blank Image
 ![image](https://hackmd.io/_uploads/SkkflQi1eg.png)
-Resource: image.png
+
+Resource: [image.png](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Steganography/image.png)
 
 This image has size 8x17, so it's hard to see with eyes.
 Check with `strings` for content and `zsteg` for lsb, I got the flag.
@@ -109,23 +129,27 @@ Check with `strings` for content and `zsteg` for lsb, I got the flag.
 
 ## I AM Steve
 ![image](https://hackmd.io/_uploads/SyJWWQokel.png)
-Resource: ChickenJockey.png
+
+Resource: [ChickenJockey.png](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Steganography/ChickenJockey.png)
 
 ![ChickenJockey](https://hackmd.io/_uploads/r1UhbQj1xg.png)
 
 I saw that it has a mini black line in the top of the image, so maybe something was hidden in color bit.
 
 About color bit, using `zsteg` to extract, I got a base64 in `b1,rgb,lsb,xy`
+
 ![image](https://hackmd.io/_uploads/rJ7UGmsyxx.png)
 
 Decode it and get the flag
+
 ![image](https://hackmd.io/_uploads/SyPPf7s1lg.png)
 
 **FLAG: CIT{THIS_is_a_crafting_table}**
 
 ## sw0906
 ![image](https://hackmd.io/_uploads/SJf5fQoJgg.png)
-Resource: yoda
+
+Resource: [yoda](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Steganography/yoda)
 
 It is a data file, first check with HxD
 ![Screenshot 2025-04-26 173517](https://hackmd.io/_uploads/By0aMmjklg.png)
@@ -159,13 +183,15 @@ fix_reverse_blocks("yoda", "output_yoda.jpeg")
 ```
 
 Open fix file and get the flag
+
 ![image](https://hackmd.io/_uploads/rysKNmjyge.png)
 
 **FLAG: CIT{h1dd3n_n0_m0r3_1t_i5}**
 
 ## Sorry, you're NOT a sigma
 ![image](https://hackmd.io/_uploads/SkLVrms1ge.png)
-Resource: lion.mp4
+
+Resource: [lion.mp4](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Steganography/lion.mp4)
 
 The describe give the hint "track" so I just follow it.
 
@@ -194,6 +220,7 @@ Open with `Audacity` and use mode `Spectrogram`
 ![Screenshot 2025-04-26 175141](https://hackmd.io/_uploads/Hkg-_7okle.jpg)
 
 Get a image about command. Run this command and get the flag
+
 ![Screenshot 2025-04-26 175710](https://hackmd.io/_uploads/ByuX_msJex.png)
 
 **FLAG: CIT{wh3n_th3_l10n_sp34k5_y0u_l1st3n}**
@@ -201,13 +228,17 @@ Get a image about command. Run this command and get the flag
 # MISC
 ## Robots
 ![image](https://hackmd.io/_uploads/BkauuQjklg.png)
+
 Check /robots.txt in url
+
 ![image](https://hackmd.io/_uploads/SyBp_Xoygg.png)
+
 **FLAG: CIT{m6F2nr8RgjYI}**
 
 ## Calculator
 ![image](https://hackmd.io/_uploads/H1vxF7oyxg.png)
-Resource: calculator.lua
+
+Resource: [calculator.lua](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Misc/calculator.lua)
 
 ![image](https://hackmd.io/_uploads/S1A4KQjJll.png)
 
@@ -235,8 +266,8 @@ That command is so suss!!, it is an obfuscation powershell that seem run somethi
 Deobfuscation that command is quite hard for me, so I check Windows Event about file creation and open some directories I think it could be found.
 
 It is in `Local/Temp/`
-![image](https://hackmd.io/_uploads/r13S2Xo1xe.png)
 
+![image](https://hackmd.io/_uploads/r13S2Xo1xe.png)
 
 **FLAG: CIT{th1s_a1nt_m4lw4r3_d0nt_w0rry}**
 
@@ -244,7 +275,9 @@ It is in `Local/Temp/`
 ![image](https://hackmd.io/_uploads/ryLjnmikle.png)
 ## No Country for Old Keys
 ![image](https://hackmd.io/_uploads/SJVp3Xsylg.png)
+
 Searching and finding there are two media: `linkedin and github`. About API key, check github
+
 ![image](https://hackmd.io/_uploads/SJ24aXi1xl.png)
 
 It has only one project, check it's commits (there are 7 commits)
@@ -252,6 +285,7 @@ It has only one project, check it's commits (there are 7 commits)
 ![image](https://hackmd.io/_uploads/SyV3pQjygx.png)
 
 Check `removed my API key` commit and get it
+
 ![image](https://hackmd.io/_uploads/r1XAT7iJll.png)
 
 **FLAG: CIT{ap9gt04qtxcqfin9}**
@@ -276,6 +310,7 @@ Let's check this domain with [Whois](https://who.is/)
 ![image](https://hackmd.io/_uploads/HJO71ViJle.png)
 
 There no more information in Linkedin, next searching with username found in github (antmcconn)
+
 ![image](https://hackmd.io/_uploads/rJyOJVjkex.png)
 
 Found an X account [antmcconn](https://x.com/antmcconn)
@@ -286,6 +321,7 @@ See a post with hashtag `#throwback`, so we need to check the day of this event.
 Search with Google Lens
 
 ![image](https://hackmd.io/_uploads/H11Hg4okgl.png)
+
 It is in Gillette Stadium
 
 Now, using the power of Artificial Intelligence. :fire: 
@@ -297,12 +333,16 @@ Now, using the power of Artificial Intelligence. :fire:
 # Reverse Engineering
 ## Read Only
 ![image](https://hackmd.io/_uploads/rkVX-4iJex.png)
+
+Resource: [readonly](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Rev/readonly)
+
 Use `IDA` to open it
 Check the `start function`
 ![image](https://hackmd.io/_uploads/SkldGViJgg.png)
 
 It call to `sub_407C05 function`, so I follow that.
 ![image](https://hackmd.io/_uploads/SkJsGVoJel.png)
+
 The flag is show through v6, and v6 reads the string CIT{87z1BjG1968G} so It is the flag.
 
 **FLAG: CIT{87z1BjG1968G}**
