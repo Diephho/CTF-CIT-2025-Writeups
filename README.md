@@ -330,6 +330,23 @@ Now, using the power of Artificial Intelligence. :fire:
 
 **FLAG: CIT{10/22/2023}**
 
+## Timesink
+![image](https://hackmd.io/_uploads/H1pgOrjkxe.png)
+
+Searching using Google Lens with that brigde
+
+![Screenshot 2025-04-27 130037](https://hackmd.io/_uploads/ByIS_Sjyge.jpg)
+
+![image](https://hackmd.io/_uploads/Byhv_royeg.png)
+
+It is "Little Nestucca River Bridge II"
+
+![Screenshot 2025-04-27 130244](https://hackmd.io/_uploads/r1e3uroylx.jpg)
+
+The road name is the flag
+
+**FLAG: CIT{Little_Nestucca_River_Rd}**
+
 # Reverse Engineering
 ## Read Only
 ![image](https://hackmd.io/_uploads/rkVX-4iJex.png)
