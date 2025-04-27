@@ -137,7 +137,7 @@ But this starts with `E0 FF D8 FF` and next `46 4A 10 00`
 I fixed those bytes but the image was still corrupted. 
 Finally, I got it, not only magic bytes but also all bytes of file, with 4 consecutive bytes, it is written in reverse. Write a python program to repair it
 
-```python3=
+```python
 def fix_reverse_blocks(input_path, output_path):
     with open(input_path, "rb") as f:
         data = f.read()
