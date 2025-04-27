@@ -154,7 +154,7 @@ Resource: [yoda](https://github.com/Diephho/CTF-CIT-2025-Writeups/blob/main/Steg
 It is a data file, first check with HxD
 ![Screenshot 2025-04-26 173517](https://hackmd.io/_uploads/By0aMmjklg.png)
 
-I see something familier. Check with [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures), with first 4 bytes, I look like JPEG but in reverse.
+I see something familier. Check with [List of file signatures](https://en.wikipedia.org/wiki/List_of_file_signatures), with first 4 bytes, It looks like JPEG but in reverse.
 JPEG starts with `FF D8 FF E0` `00 10 4A 46` `49 46 00 01`
 But this starts with `E0 FF D8 FF` and next `46 4A 10 00`
 
