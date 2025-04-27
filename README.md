@@ -225,6 +225,20 @@ Get an image about command. Run this command and get the flag
 
 **FLAG: CIT{wh3n_th3_l10n_sp34k5_y0u_l1st3n}**
 
+## Queen's Gambit
+
+![image](https://hackmd.io/_uploads/S1ly0QnJxx.png)
+
+Use zsteg to extract lsb, get the chess move
+
+![image](https://hackmd.io/_uploads/Hyy2am3kee.png)
+
+Put it in chess board, I see the word "PWN"
+
+![Screenshot 2025-04-28 054738](https://github.com/user-attachments/assets/e90e2b21-5a09-4514-ab7f-aff46d1dfb26)
+
+**FLAG: CIT{PWN}**
+
 # MISC
 ## Robots
 ![image](https://hackmd.io/_uploads/BkauuQjklg.png)
@@ -270,20 +284,6 @@ It is in `Local/Temp/`
 ![image](https://hackmd.io/_uploads/r13S2Xo1xe.png)
 
 **FLAG: CIT{th1s_a1nt_m4lw4r3_d0nt_w0rry}**
-
-## Queen's Gambit
-
-![image](https://hackmd.io/_uploads/S1ly0QnJxx.png)
-
-Use zsteg to extract lsb, get the chess move
-
-![image](https://hackmd.io/_uploads/Hyy2am3kee.png)
-
-Put it in chess board, I see the word "PWN"
-
-![Screenshot 2025-04-28 051358](https://hackmd.io/_uploads/ryna6m21lx.png)
-
-**FLAG: CIT{PWN}**
 
 # OSINT
 ![image](https://hackmd.io/_uploads/ryLjnmikle.png)
