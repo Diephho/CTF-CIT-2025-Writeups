@@ -1,5 +1,5 @@
 # CTF@CIT 2025 writeups
-![image](https://hackmd.io/_uploads/S1KBQNjkxg.png)
+![image](https://github.com/user-attachments/assets/f321e2e2-64c4-487c-a02e-156df343947f)
 
 # Crypto
 ## Rotten
@@ -270,6 +270,20 @@ It is in `Local/Temp/`
 ![image](https://hackmd.io/_uploads/r13S2Xo1xe.png)
 
 **FLAG: CIT{th1s_a1nt_m4lw4r3_d0nt_w0rry}**
+
+## Queen's Gambit
+
+![image](https://hackmd.io/_uploads/S1ly0QnJxx.png)
+
+Use zsteg to extract lsb, get the chess move
+
+![image](https://hackmd.io/_uploads/Hyy2am3kee.png)
+
+Put it in chess board, I see the word "PWN"
+
+![Screenshot 2025-04-28 051358](https://hackmd.io/_uploads/ryna6m21lx.png)
+
+**FLAG: CIT{PWN}**
 
 # OSINT
 ![image](https://hackmd.io/_uploads/ryLjnmikle.png)
